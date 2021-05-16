@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  .sideBar {
+    width: 20%;
+    background: #f9f9f9;
+    height: 100vh;
+    color: #000;
+    border-right: 1px solid #eae9e9;
+    padding: 0 0.3%;
+    .SideBar-Header {
+      border-bottom: 1px solid #eae9e9;
+      padding: 5% 2%;
+      p {
+        margin: 0;
+        line-height: 1;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+    }
+    .SideBar-Content {
+      ul {
+        padding: 0 !important;
+        margin: 0 !important;
+        .ddcontainer {
+          padding: 2% 3%;
+          margin-bottom: 1%;
+          cursor: pointer;
+          display: block !important;
+          li {
+            list-style-type: none !important;
+          }
+          &:hover {
+            background: #f7f7f7;
+          }
+        }
+      }
+    }
+  }
+
+  .ChartContainer {
+    width: 80%;
+    .Inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 30%;
+      justify-content: center;
+      .Input-Container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1%;
+        position: relative;
+        label {
+          width: 100px;
+        }
+        .Input-Box {
+          background: #fbfbfb;
+          width: 550px;
+          border: 1px solid #eaeaea;
+          height: 40px;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          padding-left: 1%;
+          .Input-Val {
+            width: fit-content;
+            height: 25px;
+            background: cadetblue;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0 2%;
+            margin-right: 1%;
+          }
+        }
+        .ClearBtn {
+          width: fit-content;
+          height: 42px;
+          align-items: center;
+          position: absolute;
+          display: flex;
+          right: -1%;
+          border-top-right-radius: 3px;
+          padding: 0 2%;
+          border-bottom-right-radius: 3px;
+          color: #fff;
+          background: #e60000;
+          font-family: inherit;
+          cursor: pointer !important;
+        }
+      }
+    }
+    .graphContainer {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+      .noVal {
+        font-size: 15px;
+        width: fit-content;
+        height: 35px;
+        background: #80a7c3;
+        color: #fff;
+        padding: 0 4%;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        font-family: monospace;
+        letter-spacing: -.25px;
+        font-weight: 500;
+    }
+      .chart {
+        width: 85% !important;
+        height: 100% !important;
+    }
+  }
+  }
+}
